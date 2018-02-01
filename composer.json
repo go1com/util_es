@@ -11,5 +11,6 @@
   "require": {
     "beberlei/assert": "^2.5",
     "ongr/elasticsearch-dsl": "^5.0"
-  }
+  },
+  "bin": ["bin/reindex.php"]
 }
