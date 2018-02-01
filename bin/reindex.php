@@ -41,7 +41,7 @@ $app->extend('go1.client.mq', function () use ($app) {
 
 $portalId = getenv('PORTAL_ID');
 $url = '/reindex?jwt=' . UserHelper::ROOT_JWT;
-$url .= $portalId ? "&portal_id={$portalId}" : '';
+$url .= $portalId ? "&portalId={$portalId}" : '';
 
 $req = Request::create($url, 'POST');
 $res = $app->handle($req);
