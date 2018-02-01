@@ -33,7 +33,7 @@ $app->extend('go1.client.mq', function () use ($app) {
 
         public function publish($body, string $routingKey, array $context = [])
         {
-            echo "[$routingKey] " . print_r($body, true) . "\n";
+            echo "[$routingKey:$routingKey] " . print_r($body, true) . "\n";
 
             $req = Request::create('/consume?jwt=' . UserHelper::ROOT_JWT, 'POST');
             $req->request->replace(['routingKey' => $routingKey, 'body' => $body]);
