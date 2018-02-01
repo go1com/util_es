@@ -12,8 +12,11 @@ use go1\clients\MqClient;
 use go1\util\user\UserHelper;
 use Symfony\Component\HttpFoundation\Request;
 
-$app = require __DIR__ . '/../public/index.php';
-$app = require __DIR__ . '/../public/index.php';
+$appRoot = is_dir(__DIR__ . '/../../../../vendor') ? __DIR__ . '/../../../..' : '';
+!$appRoot && die('Can not find application directory/');
+
+$app = require "{$appRoot}/public/index.php";
+$app = require "{$appRoot}/public/index.php";
 
 /**
  * Process the messages directly without RabbitMQ.
@@ -46,7 +49,4 @@ $url .= $portalId ? "&portalId={$portalId}" : '';
 $req = Request::create($url, 'POST');
 $res = $app->handle($req);
 
-dump(
-    $res->getStatusCode(),
-    $res->getContent()
-);
+echo "[RESPONSE] {$res->getStatusCode()} {$res->getContent()}\n";
