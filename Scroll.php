@@ -25,6 +25,6 @@ class Scroll
             }
         }
 
-        $scrollId && $client->clearScroll(['scroll' => $duration, 'scroll_id' => $scrollId]);
+        $scrollId && $client->clearScroll(['scroll_id' => $scrollId]);
     }
 }
