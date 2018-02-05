@@ -1,6 +1,6 @@
 <?php
 
-namespace go1\util_es\explore;
+namespace go1\util_es;
 
 use Elasticsearch\Client;
 
