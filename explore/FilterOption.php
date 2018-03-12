@@ -5,6 +5,7 @@ namespace go1\util_es\explore;
 class FilterOption
 {
     public $user;
+    public $actor;
     public $portal;
     public $sort;
     public $offset;
