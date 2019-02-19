@@ -1,16 +1,18 @@
 {
-  "name": "go1/util_es",
-  "license": "MIT",
-  "prefer-stable": true,
+  "name":              "go1/util_es",
+  "license":           "MIT",
+  "prefer-stable":     true,
   "minimum-stability": "stable",
-  "autoload": {
+  "autoload":          {
     "psr-4": {
       "go1\\util_es\\": "./"
     }
   },
-  "require": {
-    "beberlei/assert": "^2.5",
+  "require":           {
+    "beberlei/assert":        "^3.2.0",
     "ongr/elasticsearch-dsl": "^5.0"
   },
-  "bin": ["bin/reindex.php"]
+  "bin":               [
+    "bin/reindex.php"
+  ]
 }
